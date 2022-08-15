@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import axios from "axios";
+import "./styles.css";
+import PatternPuzzle from "./components/PatternPuzzle"
+import ColorPickPuzzle from "./components/ColorPickPuzzle";
+import TapPuzzle from "./components/TapPuzzle";
+import 'bootstrap/dist/css/bootstrap.min.css';
+// import {
+//   CircularInput,
+//   CircularTrack,
+//   CircularProgress,
+//   CircularThumb
+// } from 'react-circular-input';
 
-function App() {
+export default function App() {
+
+  // const [value, setValue] = React.useState(0.25);
+  // const [state, setState] = React.useState('#fff');
+  // const [count, setCount] = React.useState(0);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <PatternPuzzle />
+
+      {/* <ColorPickPuzzle /> */}
+
+      {/* <TapPuzzle /> */}
+
+
+      {/* <CircularInput value={value} onChange={setValue}>
+        <CircularTrack />
+        <CircularProgress />
+        <CircularThumb />
+      </CircularInput> */}
+
     </div>
   );
 }
-
-export default App;

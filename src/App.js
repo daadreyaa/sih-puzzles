@@ -4,7 +4,11 @@ import "./styles.css";
 import PatternPuzzle from "./components/PatternPuzzle"
 import ColorPickPuzzle from "./components/ColorPickPuzzle";
 import TapPuzzle from "./components/TapPuzzle";
+import ImgPuzzle from "./components/ImgPuzzle";
+import ImgShuffle from "./components/ImgShuffle";
+import LanguageSelect from "./components/LanguageSelect";
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // import {
 //   CircularInput,
 //   CircularTrack,
@@ -20,9 +24,16 @@ export default function App() {
 
 
   return (
-    <div className="App">
+    <>
 
-      <PatternPuzzle />
+<div className="App">
+
+{/* <LanguageSelect/> */}
+
+<ImgShuffle/>
+
+{/* <ImgPuzzle/> */}
+      {/* <PatternPuzzle /> */}
 
       {/* <ColorPickPuzzle /> */}
 
@@ -36,5 +47,8 @@ export default function App() {
       </CircularInput> */}
 
     </div>
+
+    </>
+    
   );
 }

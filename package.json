@@ -14,6 +14,7 @@
     "bootstrap": "^5.2.0",
     "buffer": "^6.0.3",
     "graphic-pwd": "^1.0.16",
+    "jquery": "^3.6.0",
     "patch-package": "^6.4.7",
     "react": "^18.2.0",
     "react-circular-input": "^0.2.4",

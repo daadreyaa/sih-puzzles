@@ -7,3 +7,13 @@ html {
     background: white;
     color: white;
 }
+
+#wrapper {
+    display:flex;
+    flex-wrap:wrap;
+  }
+  .splitImg {
+    padding: 1px;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+  }

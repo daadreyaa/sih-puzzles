@@ -29,9 +29,9 @@ export default function App() {
 
 <div className="App">
 
-{/* <LanguageSelect/> */}
+<LanguageSelect/>
 
-<ImgShuffle/>
+{/* <ImgShuffle/> */}
 
 {/* <ImgPuzzle/> */}
       {/* <PatternPuzzle /> */}

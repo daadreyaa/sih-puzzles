@@ -17,3 +17,14 @@ html {
     background-clip: content-box;
     background-repeat: no-repeat;
   }
+
+  .grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .cell {
+    padding: 10px;
+    background-color: #ccc;
+  }

@@ -7,7 +7,9 @@ import TapPuzzle from "./components/TapPuzzle";
 import ImgPuzzle from "./components/ImgPuzzle";
 import ImgShuffle from "./components/ImgShuffle";
 import LanguageSelect from "./components/LanguageSelect";
+import SignUp from "./components/DevSignUp"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CustomFormValidation from "./components/DevSignUp";
 
 
 // import {
@@ -29,7 +31,9 @@ export default function App() {
 
 <div className="App">
 
-<LanguageSelect/>
+  <CustomFormValidation/>
+
+{/* <LanguageSelect/> */}
 
 {/* <ImgShuffle/> */}
 

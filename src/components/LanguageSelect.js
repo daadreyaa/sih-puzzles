@@ -11,8 +11,11 @@ const LanguageSelect = () => {
 
     // var selectedChars = []
     
-    const en = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
-    const ta = ["க", "ங", "ச", "ஞ", "ட", "ண", "த", "ந", "ப"]
+    var en = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
+    en = shuffle(en)
+    // \,"j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"]
+    const ta =['க', 'ங', 'ச', 'ஞ', 'ட', 'ண', 'த', 'ந', 'ப']
+    // , 'ம', 'ய', 'ர', 'ல', 'வ', 'ழ', 'ள', 'ற', 'ன']
     const hi = ["आ", "इ", "ऋ", "ए", "क", "ख", "छ", "ज", "झ"]
     // ['க', 'ங', 'ச', 'ஞ', 'ட', 'ண', 'த', 'ந', 'ப', 'ம', 'ய', 'ர', 'ல', 'வ', 'ழ', 'ள', 'ற', 'ன']
     const [selectedLang, setLang] = useState('');
@@ -38,8 +41,6 @@ const LanguageSelect = () => {
 
     }
 
-  
-
     function shuffle(array) {
         let currentIndex = array.length, randomIndex;
 
@@ -58,36 +59,34 @@ const LanguageSelect = () => {
         return array;
     }
 
-    // function OnPress(value1) {
-    //     selectedChars.push(value1);
-    //     console.log("current selected char value is " + selectedChars)
-    //         }
-  
 
     return (
         <>
-
-            <h1>Language Puzzle</h1>
+<div className="container puzzle-box">
+            {/* <h1>Language Puzzle</h1> */}
+            <h4>Chose a combination of letters in your preferred language</h4>
             <ReactLanguageSelect
                 defaultLanguage="en"
-                searchable={true}
-                searchPlaceholder="Search for a language"
+                names={"international"}
+                searchable={false}
+                // searchPlaceholder="Search for a language"
                 onSelect={onSelectLanguage}
                 languages={["en", "ta", "hi"]}
             />
 
-            <h6>The selected language is <h4> {selectedLang} </h4> </h6>
+            {/* <h6>The selected language is <h4> {selectedLang} </h4> </h6> */}
             <div className="container"><div className="grid">
 
-               {letters.map(a => (<button className="btn btn-light cell" onClick={()=>setSolution([...solution,a])} >{a}</button>)) }
+               {letters.map(a => (<button className="btn btn-outline-primary cell" onClick={()=>setSolution([...solution,a])} >{a}</button>)) }
             </div></div>
+            
 <div className="container">
-<h3>{solution.join(",")}</h3>
+<h3>{solution.join("")}</h3>
 </div>
 
+<button className="btn btn-primary" onClick={console.log("The data is : " + solution.join(""))}>Confirm</button>
 
-
-
+</div>
         </>
 
     );

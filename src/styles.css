@@ -21,7 +21,8 @@ html {
   .grid {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 0.1fr);
+    justify-content: center;
   }
   
   .cell {
@@ -39,7 +40,7 @@ html {
     background-position: center;
   }
   .login-heading {
-    font-weight: 300;
+    font-weight: 500;
   }
   .btn-login {
     font-size: 0.9rem;
@@ -50,3 +51,9 @@ html {
   {
     border-color: red!important;
   }
+
+.puzzle-box{
+  width: 600px;
+  height: 600px;
+  /* background-color: aqua; */
+}

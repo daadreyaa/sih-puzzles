@@ -10,6 +10,8 @@ import LanguageSelect from "./components/LanguageSelect";
 import SignUp from "./components/DevSignUp"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomFormValidation from "./components/DevSignUp";
+import SubmitButton from "./components/button";
+
 
 
 // import {
@@ -31,7 +33,9 @@ export default function App() {
 
 <div className="App">
 
-  <CustomFormValidation/>
+  <SubmitButton value="Welome"/>
+
+  {/* <CustomFormValidation/> */}
 
 {/* <LanguageSelect/> */}
 

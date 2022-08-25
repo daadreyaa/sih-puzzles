@@ -2,22 +2,22 @@ import React from "react";
 import ReactLanguageSelect from 'react-languages-select';
 import { useState } from "react";
 import 'react-languages-select/css/react-languages-select.css';
-// import 'react-languages-select/scss/react-languages-select.scss';
-
-
-
 
 const LanguageSelect = () => {
-
-    // var selectedChars = []
     
-    var en = ["a", "b", "c", "d", "e", "f", "g", "h", "i"]
+var characters = "abcdefg".split("")
+console.log("the aray is "+characters);
+
+    var en = "qwertyuiopasdfghjklzxcvbnm".split("")
+    // var en_C = "QWERTYUIOPASDFGHJKLZXCVBNM".split("")
     en = shuffle(en)
-    // \,"j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9"]
-    const ta =['க', 'ங', 'ச', 'ஞ', 'ட', 'ண', 'த', 'ந', 'ப']
-    // , 'ம', 'ய', 'ர', 'ல', 'வ', 'ழ', 'ள', 'ற', 'ன']
-    const hi = ["आ", "इ", "ऋ", "ए", "क", "ख", "छ", "ज", "झ"]
-    // ['க', 'ங', 'ச', 'ஞ', 'ட', 'ண', 'த', 'ந', 'ப', 'ம', 'ய', 'ர', 'ல', 'வ', 'ழ', 'ள', 'ற', 'ன']
+
+    const ta ="கஙசஞடணதநனபமயரறலளழவஅஆஇஈஉஊாிீுூஎஏஐஒஓஎஏ".split("")
+
+    const hi = "कखगघङचछजझञटठडढणतथदधनपफबभमअआइईउऊऋॠऌॡ".split("")
+
+    const ko = "아악안알암압앙앞애액앵야얀약양얘어억언얼엄업엉에여역연열염엽영예오옥온올".split('')
+   
     const [selectedLang, setLang] = useState('');
     const [letters, setLetters] = useState(en);
     const [solution, setSolution] = useState([]);
@@ -36,6 +36,11 @@ const LanguageSelect = () => {
         }
         if (languageCode === "hi") {
             setLetters(shuffle(hi));
+            console.log(letters);
+        }
+
+        if (languageCode === "ko") {
+            setLetters(shuffle(ko));
             console.log(letters);
         }
 
@@ -71,7 +76,7 @@ const LanguageSelect = () => {
                 searchable={false}
                 // searchPlaceholder="Search for a language"
                 onSelect={onSelectLanguage}
-                languages={["en", "ta", "hi"]}
+                languages={["en", "ta", "hi","ko"]}
             />
 
             {/* <h6>The selected language is <h4> {selectedLang} </h4> </h6> */}

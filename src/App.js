@@ -11,6 +11,7 @@ import SignUp from "./components/DevSignUp"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CustomFormValidation from "./components/DevSignUp";
 import SubmitButton from "./components/button";
+import Puzzles from "./components/puzzles";
 
 
 
@@ -22,7 +23,7 @@ import SubmitButton from "./components/button";
 // } from 'react-circular-input';
 
 export default function App() {
-
+  
   // const [value, setValue] = React.useState(0.25);
   // const [state, setState] = React.useState('#fff');
   // const [count, setCount] = React.useState(0);
@@ -32,8 +33,10 @@ export default function App() {
     <>
 
 <div className="App">
+ 
 
-  <SubmitButton value="Welome"/>
+<Puzzles  puzzles_selected = {[1,2,5]} />
+  {/* <SubmitButton value="Welome"/> */}
 
   {/* <CustomFormValidation/> */}
 

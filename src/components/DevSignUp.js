@@ -54,8 +54,14 @@ const defaultState = {
       this.setState(defaultState);
       }
       }
+
+
+      
     render(){
       return(
+<>
+
+
         <div className="App">
           <div class="container-fluid ps-md-0">
               <div class="row g-0">
@@ -65,10 +71,15 @@ const defaultState = {
                     <div class="container">
                       <div class="row">
                         <div class="col-md-9 col-lg-8 mx-auto">
-                          <h3 class="login-heading mb-4">Get Started</h3>
+                          <h2 class="login-heading mb-4">Get Started</h2>
             
                           
                           <form>
+                          <div class="form-floating mb-3">
+                              <input type="text" className={"form-control " + (this.state.usernameError ? 'invalid' : '')} id="floatingInput" name='username' placeholder="john" value={this.state.username} onChange={this.handleInputChange} />
+                              <label for="floatingInput">Username</label>
+                              <span className="text-danger">{this.state.usernameError}</span>
+                            </div>
                             <div class="form-floating mb-3">
                               <input type="email" className={"form-control " + (this.state.emailError ? 'invalid' : '')} id="floatingInput" name='email' placeholder="name@example.com" value={this.state.email} onChange={this.handleInputChange} />
                               <label for="floatingInput">Email address</label>
@@ -79,11 +90,7 @@ const defaultState = {
                               <label for="floatingPassword">Password</label>
                               <span className="text-danger">{this.state.passwordError}</span>
                             </div>
-                            <div class="form-floating mb-3">
-                              <input type="text" className={"form-control " + (this.state.usernameError ? 'invalid' : '')} id="floatingInput" name='username' placeholder="john" value={this.state.username} onChange={this.handleInputChange} />
-                              <label for="floatingInput">Username</label>
-                              <span className="text-danger">{this.state.usernameError}</span>
-                            </div>
+                            
                             {/* <div class="form-check mb-3">
                               <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck" />
                               <label class="form-check-label" for="rememberPasswordCheck">
@@ -107,7 +114,11 @@ const defaultState = {
               </div>
             </div>
         </div>
+        </>
  )  
 }
 }
+
+
+
 export default CustomFormValidation;

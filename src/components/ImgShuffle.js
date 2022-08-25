@@ -51,6 +51,10 @@ img.onload = function () {
       sample.push(element)
 
 
+        $("#"+i+j).on("mousedown", function (e) {
+    value.push(i+""+j)
+    console.log(i+""+j);
+  });
     }
   }
 
@@ -119,14 +123,15 @@ const ImgShuffle = () => {
 
   return (
     <>
-      <h1>Puzzle</h1>
+      {/* <h1>Puzzle</h1> */}
+      
       {/* <center><Puzzle
                 image='https://images.unsplash.com/photo-1616763355548-1b606f439f86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDcwfGFldTZyTC1qNmV3fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
             /></center> */}
-
+      <h4>Choose any number of </h4>
       <center><div id="wrapper" >
       </div></center>
-      <button onClick={Generate}>Generate</button>
+      <button className="btn btn-primary m-2" onClick={Generate}>Generate</button>
 
     </>
   );
